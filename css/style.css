@@ -1,0 +1,261 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background: white;
+  background-image: url(../img/cropped-3840-2160-738343.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.466);
+  position: absolute;
+}
+#myClockDisplay {
+  color: rgb(255, 230, 0);
+  font-weight: 700;
+  position: absolute;
+  top: -260px;
+  left: -36px;
+  font-size: 33px;
+  z-index: 99;
+  font-style: italic;
+  transform: skewY(13.4deg);
+  animation: clock 2s infinite;
+}
+.table {
+  width: 100%;
+  height: 300px;
+  background-image: url(../img/martin-novak-wood-texture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+}
+.tb {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.336);
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.clock {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  transform: skewY(-15deg);
+  bottom: 140px;
+}
+.clock::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(19, 19, 19);
+  transform-origin: right;
+  transform: skewY(45deg);
+}
+.clock::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 200px;
+  height: 100px;
+  background-color: rgb(37, 37, 37);
+  transform-origin: right;
+  transform: skewX(45deg);
+  transform-origin: bottom;
+}
+.button,
+.button1,
+.button2,
+.button4 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  transform: skewX(5deg);
+
+  z-index: 100;
+}
+.proj{
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    transform: skewX(45deg);
+    background: rgba(255,241,118 ,1);
+    top: -57px;
+    z-index: 100;
+    left: 40px;
+    outline: 10px solid rgb(26, 26, 26);
+
+}
+.button {
+  background-color: rgb(129, 112, 81);
+
+  bottom: 58px;
+  left: 18px;
+}
+.button1 {
+  background-color: rgb(102, 90, 67);
+
+  bottom: 58px;
+  left: 48px;
+}
+.button2 {
+  background-color: rgb(88, 78, 60);
+
+  bottom: 58px;
+  left: 78px;
+}
+.button4 {
+  width: 150px;
+  height: 10px;
+  border-radius: 0;
+  bottom: 22px;
+  left: 28px;
+  background-color: rgb(37, 37, 37);
+  border: 1px solid gray;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 180px 100px 0 100px;
+  border-color: rgba(255,241,118 ,1) transparent transparent transparent;
+  filter: blur(14px);
+  opacity: 0.7;
+  position: absolute;
+  bottom: 160px;
+  z-index: 120;
+  left: -50px;
+  transform: skewX(0deg) skewY(13deg);
+
+}
+
+.night
+{
+	position: absolute;
+  top: 21%;
+  left: 71%;
+	background:linear-gradient( to bottom right,rgba(63,81,181,1) 0%,
+	rgba(171,71,188 ,1) 70%);
+	box-shadow: 1px 1px 30px rgba(81,45,168 ,1);
+
+}
+.moon
+{
+	position: absolute;
+	top:-10%;
+	left:65%;
+	width:30px;
+	height: 30px;
+	border-radius: 100%;
+	background:rgba(255,241,118 ,1);
+	box-shadow: 1px 1px 30px rgba(224,224,224 ,1);
+}
+.spot1
+{
+	position: absolute;
+	top:0%;
+	left:85%;
+	width:10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: #777;
+}
+.spot2
+{
+	position: absolute;
+	top:30%;
+	left:75%;
+	width:5px;
+	height: 5px;
+	border-radius: 100%;
+	background-color: #777;
+}
+
+.night li
+{
+	position: absolute;
+	list-style: none;
+	width: 3px;
+	height: 3px;
+	border-radius: 100%;
+	background-color:#fff;
+	
+	
+	transform: rotate(45deg);
+}
+.night li:nth-child(1)
+{
+	
+top:30%;
+left:65%;
+}
+
+.night li:nth-child(2)
+{
+top:35%;
+left:53%;
+}
+
+.night li:nth-child(3)
+{
+
+opacity: 0;
+top:20%;
+left:75%;
+width:2px;
+height: 2px;
+animation: meteor 1.5s infinite linear;
+animation-delay: 0.6s;
+
+}
+
+.night li:nth-child(4)
+{
+top:5%;
+left:50%;
+}
+
+.night li:nth-child(5)
+{
+	opacity: 0;
+top:20%;
+left:55%;
+width:1px;
+height: 15px;
+animation: meteor 1.5s infinite linear;
+}
+
+@keyframes clock{
+  0% {
+    top: -260px;;
+  }
+  50% {
+    top: -270px;;
+  }
+  100% {
+    top: -260px;;
+  }
+
+}
